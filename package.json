@@ -1,0 +1,32 @@
+{
+  "name": "codex-rename-thread",
+  "displayName": "Codex Rename Thread (Helper)",
+  "description": "Adds a resilient rename command and auto-patches Codex runtime when needed.",
+  "version": "0.0.4",
+  "publisher": "local",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "main": "./extension.js",
+  "extensionKind": [
+    "workspace"
+  ],
+  "activationEvents": [
+    "onCommand:codex.renameCurrentThread"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "codex.renameCurrentThread",
+        "title": "Rename Thread (QuickPick)",
+        "category": "Codex"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "codex.renameCurrentThread",
+        "key": "ctrl+shift+alt+r"
+      }
+    ]
+  }
+}
